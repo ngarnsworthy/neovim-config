@@ -95,8 +95,8 @@ map("n", "tt", function()
   vim.cmd('terminal')
 
   -- Close terminal on exit
-  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', '<c-\\><c-n>:q<CR>', { noremap = true, silent = true })
-  vim.api.nvim_buf_set_keymap(0, 't', 'jk', '<c-\\><c-n>:q<CR>', { noremap = true, silent = true })
+  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', 'exit<CR>', { noremap = true, silent = true })
+  vim.api.nvim_buf_set_keymap(0, 't', 'jk', 'exit<CR>', { noremap = true, silent = true })
 end, { noremap = true, silent = true })
 
 map("n", "<Tab>", ":bn<CR>", { desc = "Next buffer" })
