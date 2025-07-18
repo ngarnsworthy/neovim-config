@@ -98,3 +98,6 @@ map("n", "tt", function()
   vim.api.nvim_buf_set_keymap(0, 't', '<esc>', '<c-\\><c-n>:q<CR>', { noremap = true, silent = true })
   vim.api.nvim_buf_set_keymap(0, 't', 'jk', '<c-\\><c-n>:q<CR>', { noremap = true, silent = true })
 end, { noremap = true, silent = true })
+
+map("n", "<Tab>", ":bn<CR>", { desc = "Next buffer" })
+map("n", "<leader>cb", ":bd<CR>:bn<CR>", { desc = "Close buffer" })
